@@ -26,7 +26,12 @@ const Index = ({
         <header className="header">
           <Logo width={300} height="100%" />
         </header>
-        <section className="content">
+        <section
+          className="content"
+          style={{
+            fontFamily: currentLanguage.fontFamily || 'english-grotesque'
+          }}
+        >
           {currentLanguage.body(({ children }) => (
             <Link href={`/faq?lang=${currentLanguage.name}`}>
               <a>{children}</a>
